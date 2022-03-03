@@ -19,7 +19,14 @@ export default class Routing extends Component {
         return (
             <NavigationContainer>
                 <Drawer.Navigator>
-                    <Drawer.Screen name="Home" component={Home} initialRoute />
+                    <Drawer.Screen
+                        name="Home"
+                        component={Home}
+                        initialRoute
+                        options={{
+                            headerShown: false
+                        }}
+                    />
                     <Drawer.Screen name="Category" component={Category} />
                     <Drawer.Screen name="AllExpenses" component={AllExpenses} />
                 </Drawer.Navigator>
