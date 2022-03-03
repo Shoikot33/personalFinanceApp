@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, Headline, Appbar, Card, FAB } from 'react-native-paper';
-
+import BottomModalProduct from '../component/Modal/BottomModalProduct';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalExpense: 0
+      totalExpense: 0,
+      modalVisibility: false,
     };
   }
 
@@ -29,7 +30,7 @@ export default class Home extends Component {
         <Headline style={homeStyle.headerContainer}>
           Total Expense
         </Headline>
-        <Card elevation={3} style={{width: "70%",alignSelf: 'center'}}>
+        <Card elevation={2} style={{width: "70%",alignSelf: 'center'}}>
           <Card.Title title={"$" + this.state.totalExpense} />
         </Card>
         {/* <Button icon="camera" mode="contained" onPress={() => this.props.navigation.openDrawer()}>
@@ -40,6 +41,7 @@ export default class Home extends Component {
           icon="plus"
           onPress={() => console.log('Pressed')}
         />
+        {/* <BottomModalProduct modalVisibility={this.state.modalVisibility}/> */}
       </View>
     );
   }
