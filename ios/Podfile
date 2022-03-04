@@ -13,6 +13,8 @@ target 'financepro' do
   )
 
 
+  pod 'RNDateTimePicker', :path => '../node_modules/@react-native-community/datetimepicker'
+
   target 'financeproTests' do
     inherit! :complete
     # Pods for testing
